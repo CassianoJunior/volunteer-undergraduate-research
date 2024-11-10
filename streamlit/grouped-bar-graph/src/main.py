@@ -28,6 +28,5 @@ fig = px.bar(
   title="Sales by Product and Quarter",
 )
 
-# Display the graph in the Streamlit app
 st.title("Sales Data")
 st.plotly_chart(fig)
