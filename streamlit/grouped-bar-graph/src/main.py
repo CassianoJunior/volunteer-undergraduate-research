@@ -6,8 +6,11 @@ from os import path
 df = pd.read_csv(path.join(path.dirname(__file__), "../../../data.csv"))
 
 num_trimesters = st.selectbox(
-  "Select the number of trimesters", options=[1, 2, 3, 4], index=3
+  "Selecione o número de trimestres",
+  options=["1 trimestre", "2 trimestres", "3 trimestres", "4 trimestres"],
+  index=3,
 )
+num_trimesters = int(num_trimesters.split()[0])
 
 selected_columns = ["Produto"] + [
   f"Trimestre {i}" for i in range(1, num_trimesters + 1)
