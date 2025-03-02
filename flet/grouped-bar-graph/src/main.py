@@ -31,6 +31,8 @@ def create_plot(num_trimesters):
 def main(page: ft.Page):
   page.title = "Sales Data App"
   page.scroll = "auto"
+  page.padding = 20
+  page.margin = 20
 
   trimester_dropdown = ft.Dropdown(
     label="Select Number of Trimesters",
